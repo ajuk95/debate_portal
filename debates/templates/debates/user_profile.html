@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile</title>
+</head>
+<body>
+    <h1>User Profile</h1>
+
+    <h2>{{ user_profile.user.username }}</h2>
+    <p>Debates Participated In: {{ user_profile.debates_participated.count }}</p>
+    <p>Debates Won: {{ user_profile.debates_won.count }}</p>
+    <p>Debates Lost: {{ user_profile.debates_lost.count }}</p>
+    <p>Points Earned: {{ user_profile.points_earned }}</p>
+
+    <p><a href="{% url 'logout' %}">Logout</a></p>
+</body>
+</html>

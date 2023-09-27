@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debate List</title>
+</head>
+<body>
+    <h1>Debate List</h1>
+
+    <ul>
+        {% for debate in debates %}
+            <li><a href="{% url 'debate_details' debate.id %}">{{ debate.topic }}</a></li>
+        {% empty %}
+            <li>No debates available.</li>
+        {% endfor %}
+    </ul>
+
+    <p><a href="{% url 'logout' %}">Logout</a></p>
+</body>
+</html>
